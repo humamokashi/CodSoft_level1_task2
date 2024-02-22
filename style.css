@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kode Mono", monospace;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f0f0f0;
+}
+
+.calculator {
+  position: relative;
+  width: 300px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.calculator .button {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.calculator .button #value {
+  grid-column: span 4;
+  height: 80px;
+  line-height: 80px;
+  padding: 0 20px;
+  border-radius: 8px;
+  background: #f5f5f5;
+  text-align: right;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.calculator .button span {
+  padding: 15px;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.calculator .button span:hover {
+  background-color: #f0f0f0;
+}
+
+.calculator .button span#clear {
+  grid-column: span 2;
+  background: #e74c3c;
+  color: #fff;
+}
+
+.calculator .button span#plus {
+  grid-row: span 2;
+  background: #2ecc71;
+  color: #fff;
+}
+
+.calculator .button span#equal {
+  background: #3498db;
+  color: #fff;
+}
